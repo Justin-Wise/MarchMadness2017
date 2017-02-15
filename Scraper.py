@@ -75,8 +75,10 @@ df=df[[ 'Year', 'Rank', 'Team', 'Conference', 'Wins', 'Losses', 'Seed','Pyth',
 df.head(25)
 pd.set_option('display.max_columns', None)
 pd.set_option('display.max_rows', None)
+
+df.set_index('Team', inplace = True)
+df.sort_index()
 print(df)
 
-print (df[df['Team'] == 'Purdue']['Pyth'])
-
+print (df.loc['Purdue','Pyth'])
 
