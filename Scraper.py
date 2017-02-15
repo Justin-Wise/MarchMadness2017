@@ -77,5 +77,6 @@ pd.set_option('display.max_columns', None)
 pd.set_option('display.max_rows', None)
 print(df)
 
-print df[(df.Team == 'Purdue').any()]
+print (df[df['Team'] == 'Purdue']['Pyth'])
+
 
